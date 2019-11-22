@@ -1,0 +1,36 @@
+D:\Yuste\Programacion\Microsoft .NET\Visual C#\Proyectos\Backup&Restore\ServBackupRestore\bin\Release\ServBackupRestore.exe
+D:\Yuste\Programacion\Microsoft .NET\Visual C#\Proyectos\Backup&Restore\ServBackupRestore\bin\Release\ServBackupRestore.pdb
+D:\Yuste\Programacion\Microsoft .NET\Visual C#\Proyectos\Backup&Restore\ServBackupRestore\obj\Release\ServBackupRestore.csproj.CoreCompileInputs.cache
+D:\Yuste\Programacion\Microsoft .NET\Visual C#\Proyectos\Backup&Restore\ServBackupRestore\obj\Release\ServBackupRestore.exe
+D:\Yuste\Programacion\Microsoft .NET\Visual C#\Proyectos\Backup&Restore\ServBackupRestore\obj\Release\ServBackupRestore.pdb
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x\ServBackupRestore\bin\Release\ServBackupRestore.exe
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x\ServBackupRestore\bin\Release\ServBackupRestore.pdb
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x\ServBackupRestore\obj\Release\ServBackupRestore.csproj.CoreCompileInputs.cache
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x\ServBackupRestore\obj\Release\ServBackupRestore.exe
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x\ServBackupRestore\obj\Release\ServBackupRestore.pdb
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x\ServBackupRestore\bin\Release\Microsoft.Win32.TaskScheduler.dll
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x\ServBackupRestore\bin\Release\Microsoft.Win32.TaskScheduler.xml
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x\ServBackupRestore\bin\Release\de\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x\ServBackupRestore\bin\Release\es\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x\ServBackupRestore\bin\Release\fr\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x\ServBackupRestore\bin\Release\it\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x\ServBackupRestore\bin\Release\pl\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x\ServBackupRestore\bin\Release\ru\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x\ServBackupRestore\bin\Release\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x\ServBackupRestore\obj\Release\ServBackupRestore.csproj.CopyComplete
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x .NET 4.0\ServBackupRestore\bin\Release\ServBackupRestore.exe
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x .NET 4.0\ServBackupRestore\bin\Release\ServBackupRestore.pdb
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x .NET 4.0\ServBackupRestore\bin\Release\Microsoft.Win32.TaskScheduler.dll
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x .NET 4.0\ServBackupRestore\bin\Release\Microsoft.Win32.TaskScheduler.xml
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x .NET 4.0\ServBackupRestore\bin\Release\de\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x .NET 4.0\ServBackupRestore\bin\Release\es\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x .NET 4.0\ServBackupRestore\bin\Release\fr\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x .NET 4.0\ServBackupRestore\bin\Release\it\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x .NET 4.0\ServBackupRestore\bin\Release\pl\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x .NET 4.0\ServBackupRestore\bin\Release\ru\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x .NET 4.0\ServBackupRestore\bin\Release\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x .NET 4.0\ServBackupRestore\obj\Release\ServBackupRestore.csprojAssemblyReference.cache
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x .NET 4.0\ServBackupRestore\obj\Release\ServBackupRestore.csproj.CoreCompileInputs.cache
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x .NET 4.0\ServBackupRestore\obj\Release\ServBackupRestore.csproj.CopyComplete
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x .NET 4.0\ServBackupRestore\obj\Release\ServBackupRestore.exe
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x .NET 4.0\ServBackupRestore\obj\Release\ServBackupRestore.pdb

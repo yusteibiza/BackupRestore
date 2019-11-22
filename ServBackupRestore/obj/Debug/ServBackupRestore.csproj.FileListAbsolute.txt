@@ -1,0 +1,5 @@
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x\ServBackupRestore\bin\Debug\ServBackupRestore.exe
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x\ServBackupRestore\bin\Debug\ServBackupRestore.pdb
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x\ServBackupRestore\obj\Debug\ServBackupRestore.csproj.CoreCompileInputs.cache
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x\ServBackupRestore\obj\Debug\ServBackupRestore.exe
+G:\Programacion\Proyectos y Pruebas\Microsoft\Plataforma .NET Framework\Visual C#\Proyectos\Backup&Restore\Version 2.2.x\ServBackupRestore\obj\Debug\ServBackupRestore.pdb
