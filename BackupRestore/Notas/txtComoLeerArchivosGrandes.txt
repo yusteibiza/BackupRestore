@@ -1,0 +1,89 @@
+csharp:
+System.IO.Stream iStream = null;
+
+// Búfer para leer 10 KB en el fragmento: byte[] buffer = new Byte[10000];
+// Longitud del archivo: 
+int length;
+
+// Número total de bytes que leer: 
+long dataToRead;
+
+// Identificar el archivo que descargar incluyendo su ruta de acceso. 
+string filepath = "DownloadFileName";
+
+// Identificar el nombre de archivo. 
+string filename = System.IO.Path.GetFileName(filepath);
+
+try
+{ // Abrir el archivo. 
+    iStream = new System.IO.FileStream(filepath, System.IO.FileMode.Open, System.IO.FileAccess.Read, System.IO.FileShare.Read);
+
+    // Número total de bytes que leer: dataToRead = iStream.Length;
+    Response.ContentType = "application/octet-stream"; Response.AddHeader("Content-Disposition", "attachment; filename=" + filename);
+
+    // Leer los bytes. 
+    while (dataToRead > 0)
+    { // Comprobar que el cliente está conectado. 
+        if (Response.IsClientConnected)
+        { // Read the data in buffer. 
+            length = iStream.Read(buffer, 0, 10000);
+
+            // Escribir los datos en la secuencia de salida actual. 
+            Response.OutputStream.Write(buffer, 0, length);
+
+            // Vaciar los datos en la salida HTML. 
+            Response.Flush();
+
+            buffer = new Byte[10000]; dataToRead = dataToRead - length;
+        }
+        else
+        { //impedir un bucle infinito si el usuario se desconecta dataToRead = -1; 
+        }
+    }
+}
+catch (Exception ex)
+{ // Capturar el error, si lo hay. 
+    Response.Write("Error : " + ex.Message);
+}
+finally
+{
+    if (iStream != null)
+    { //Cerrar el archivo. 
+        iStream.Close();
+    }
+}
+
+En ASP.NET 2, se incluye el nuevo método TransmitFile para la clase HttpResponse, que hace lo mismo que el método WriteFile pero sin las limitaciones ni problemas que tiene este último.
+
+csharp:
+// Algun tipo de validación o proceso
+// ...
+string file = Request.Params["file"];
+if (!string.IsNullOrEmpty(file))
+{
+    file = Path.Combine(Server.MapPath("downloads"), Path.GetFileName(file));
+
+    Response.Clear();
+    Response.ContentType = "application/octect-stream";
+    Response.AddHeader("Content–Disposition", "attachment; filename=foo.xyz");
+    Response.TransmitFile(file);
+    Response.End();
+}Posibles entradas relacionadas
+Reflector 5.0
+Proteger la descarga de archivos en ASP.NET 2
+Eliminar la cabecera X-AspNet-Version
+20 tips para mejorar el rendimiento de aplicaciones ASP.NET
+Exportar el contenido de un GridView a Excel
+"Bug" corregido en ASP.NET 2 (Beta 2)
+Implementacion de CallBack utilizando ASP.NET 1.1 y Javascript
+Exportar reportes Crystal Reports en ASP.NET
+SQL Injection en Wordpress 2.2 + exploit incluido
+Exportar reportes a PDF desde código 
+Esta entrada fué publicada el Martes, Febrero 20th, 2007 a las 8:30 am bajo .NET, ASP.NET, Desarrollo de Software, Web. Puedes seguir los comentarios de esta entrada mediante el feed RSS 2.0. También dejar un comentario, o hacer un trackback desde tu sitio. 
+
+Deja un comentario
+  Nombre (requerido)
+
+ E-Mail (no será publicado) (requerido)
+
+ Sitio Web

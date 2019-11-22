@@ -1,0 +1,132 @@
+﻿Essential Tools for Windows Services: SC.EXE
+Posted on April 30, 2014
+While the useful NET.EXE utility is great for starting an stopping windows services, it cannot do much beyond that. Enter Microsoft’s SC.EXE – a versatile command-line utility built into Windows that can help you start, stop, restart or configure any Windows Service.
+
+Type SC at a command prompt to see the extensive set of options available:
+
+DESCRIPTION:
+        SC is a command line program used for communicating with the
+        Service Control Manager and services.
+USAGE:
+        sc <server> [command] [service name] <option1> <option2>...
+        The option  has the form "\\ServerName"
+        Further help on commands can be obtained by typing: "sc [command]"
+        Commands:
+          query-----------Queries the status for a service, or
+                          enumerates the status for types of services.
+          queryex---------Queries the extended status for a service, or
+                          enumerates the status for types of services.
+          start-----------Starts a service.
+          pause-----------Sends a PAUSE control request to a service.
+          interrogate-----Sends an INTERROGATE control request to a service.
+          continue--------Sends a CONTINUE control request to a service.
+          stop------------Sends a STOP request to a service.
+          config----------Changes the configuration of a service (persistent).
+          description-----Changes the description of a service.
+          failure---------Changes the actions taken by a service upon failure.
+          failureflag-----Changes the failure actions flag of a service.
+          sidtype---------Changes the service SID type of a service.
+          privs-----------Changes the required privileges of a service.
+          qc--------------Queries the configuration information for a service.
+          qdescription----Queries the description for a service.
+          qfailure--------Queries the actions taken by a service upon failure.
+          qfailureflag----Queries the failure actions flag of a service.
+          qsidtype--------Queries the service SID type of a service.
+          qprivs----------Queries the required privileges of a service.
+          qtriggerinfo----Queries the trigger parameters of a service.
+          qpreferrednode--Queries the preferred NUMA node of a service.
+          delete----------Deletes a service (from the registry).
+          create----------Creates a service. (adds it to the registry).
+          control---------Sends a control to a service.
+          sdshow----------Displays a service's security descriptor.
+          sdset-----------Sets a service's security descriptor.
+          showsid---------Displays the service SID string corresponding to
+                          an arbitrary name.
+          triggerinfo-----Configures the trigger parameters of a service.
+          preferrednode---Sets the preferred NUMA node of a service.
+          GetDisplayName--Gets the DisplayName for a service.
+          GetKeyName------Gets the ServiceKeyName for a service.
+          EnumDepend------Enumerates Service Dependencies.
+
+        The following commands don't require a service name:
+        sc <server> <command> <option>
+          boot------------(ok | bad) Indicates whether the last boot should
+                          be saved as the last-known-good boot configuration
+          Lock------------Locks the Service Database
+          QueryLock-------Queries the LockStatus for the SCManager Database
+Stopping/Starting a Service with SC
+To stop a windows service from an elevated DOS prompt, run:
+
+SC STOP <Service-Name>
+
+where <Service-Name> is the name of the service. Be sure to enclose the name in quotes if it contains a space!
+
+For example, to stop the Print Spooler service (named “Spooler”), run:
+
+SC STOP Spooler
+
+
+SC: Stopping the Print Spooler Service
+
+Notice that the SC command will simply make a request for the service to stop and return immediately, before the service has actually stopped. This is evidenced by the STOP_PENDING state (which means that the service is in the process of winding down) returned in the screenshot above. If you plan to use this command in a batch file, you may need to add a sleep/pause after calling SC to give the service some time to respond. (The NET.EXE command, which will wait/block until the service has completely stopped, may be a better choice in this respect.)
+
+Similarly, to start a windows service, use:
+
+SC START <Service-Name>
+
+Again, the request will be made but SC will not wait for the service to complete its startup before returning.
+
+Using SC to Check the Status of a Service
+To discover the state of your service, run SC with the QUERYEX option:
+
+SC QUERYEX <Service-Name>
+
+Check on the Spooler service like this:
+
+SC QUERYEX Spooler
+
+
+SC: Checking the Print Spooler Service
+
+If the service is running, SC will return the underlying process identifier (“PID”) which can be used to manipulate the service’s process. This is very handy information when a service is stuck or unresponsive and must be forcibly terminated!
+
+Disabling a Service
+The CONFIG option enables you to modify a service’s settings. If you wish to disable a naughty service, preventing anyone from starting it, type:
+
+SC CONFIG <Service-Name> start= disabled
+
+For example, this command disables the infamous Interactive Services Detection Service (named “UI0Detect”):
+
+SC CONFIG UI0Detect start= disabled
+
+Note that the space in between “start=” and “disabled” is required!
+
+How to Create a New Service with SC
+SC can be used to create a new service as well. Type “SC CREATE” to see the many settings that can be applied but at a minimum you must specify:
+
+the name of the service,
+the display name of the service (a more descriptive moniker),
+the full path to the executable hosting the service
+For example, the following command creates a service called “MyService” with an executable located in “C:\MyService\MyService.exe”:
+
+SC CREATE MyService binPath= “C:\MyService\MyService.exe” DisplayName= “My very cool service”
+
+Once installed, you can work with the new service as normal in the Services application:
+
+SC: New Service Created
+
+Note that only executables explicitly written to interface with the Windows Service Control Manager should be installed this way. While SC will happily accept a regular, non-service binary, you will receive the fatal Error 1053 when you attempt to start the service. Employ a service wrapper like AlwaysUp in that situation.
+
+Using SC to Delete a Service
+The command to remove a service with SC is straightforward:
+
+SC DELETE <Service-Name>
+
+To discard the service named “MyService” that we installed above, use:
+
+SC DELETE MyService
+
+Needless to say, please use this command with caution!. Once a service is deleted it cannot be easily re-instated. Removing the wrong service can render your computer unusable!
+
+SC is the Complete Command Line Utility for Windows Services
+So whenever you need to work with a service via a batch file or from a DOS command prompt, look to SC for support. This versatile, essential tool has earned its reputation as the “Swiss Army Knife” for Windows Services!

@@ -1,0 +1,630 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EC7B861C-4790-4C44-B291-2848C8968F7E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BackupRestore</RootNamespace>
+    <AssemblyName>Backup&amp;Restore</AssemblyName>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ApplicationIcon>Backup&amp;Restore.ico</ApplicationIcon>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/BackupRestore/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>2.2.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FxCopRules>
+    </FxCopRules>
+    <RunFxCop>false</RunFxCop>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FxCopRules>
+    </FxCopRules>
+    <RunFxCop>false</RunFxCop>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A2AFC8E9ECD5958C254B6EF33C96A1E2415BEA5C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>BackupRestore_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>BackupRestore.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=2.4.1.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL" />
+    <Reference Include="ICSharpCode.SharpZipLib, Version=2.84.0.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Win32.TaskScheduler, Version=2.8.0.0, Culture=neutral, PublicKeyToken=c416bc1b32d97233, processorArchitecture=MSIL">
+      <HintPath>..\packages\TaskScheduler.2.8.0\lib\net40\Microsoft.Win32.TaskScheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.TaskScheduler.resources">
+      <HintPath>bin\Release\es\Microsoft.Win32.TaskScheduler.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\CalcularPorcentaje.cs" />
+    <Compile Include="Clases\CargarArchivoZip.cs" />
+    <Compile Include="Clases\ComprobarPorLabel.cs" />
+    <Compile Include="Clases\Configuracion.cs" />
+    <Compile Include="Clases\Emails.cs" />
+    <Compile Include="Controles\miBoton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\miBoton.Designer.cs">
+      <DependentUpon>miBoton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmErroresRest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmErroresRest.Designer.cs">
+      <DependentUpon>frmErroresRest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmInfoRestNoComp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmInfoRestNoComp.Designer.cs">
+      <DependentUpon>frmInfoRestNoComp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\CopiarDirectorio.cs" />
+    <Compile Include="Clases\CopiaSinComprimir.cs" />
+    <Compile Include="Clases\EventosApp.cs" />
+    <Compile Include="Formularios\frmCalculando.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCalculando.Designer.cs">
+      <DependentUpon>frmCalculando.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\CopiaComprimida.cs" />
+    <Compile Include="Formularios\frmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmConfig.Designer.cs">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCopiar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCopiar.Designer.cs">
+      <DependentUpon>frmCopiar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAcerca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAcerca.Designer.cs">
+      <DependentUpon>frmAcerca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmGuardando.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmGuardando.Designer.cs">
+      <DependentUpon>frmGuardando.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmInfoRestComp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmInfoRestComp.Designer.cs">
+      <DependentUpon>frmInfoRestComp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmInicial.Designer.cs">
+      <DependentUpon>frmInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmLog.Designer.cs">
+      <DependentUpon>frmLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmLogBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmLogBuscar.Designer.cs">
+      <DependentUpon>frmLogBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmOpciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmOpciones.Designer.cs">
+      <DependentUpon>frmOpciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPasswd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPasswd.Designer.cs">
+      <DependentUpon>frmPasswd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPost.Designer.cs">
+      <DependentUpon>frmPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPre.Designer.cs">
+      <DependentUpon>frmPre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmProgramador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmProgramador.Designer.cs">
+      <DependentUpon>frmProgramador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmRestaurar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRestaurar.Designer.cs">
+      <DependentUpon>frmRestaurar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmRestIndiComp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRestIndiComp.Designer.cs">
+      <DependentUpon>frmRestIndiComp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\frmErroresRest.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmErroresRest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmInfoRestNoComp.resx">
+      <DependentUpon>frmInfoRestNoComp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCalculando.resx">
+      <DependentUpon>frmCalculando.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmConfig.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCopiar.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCopiar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAcerca.resx">
+      <DependentUpon>frmAcerca.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmGuardando.resx">
+      <DependentUpon>frmGuardando.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmInfoRestComp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmInfoRestComp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmInicial.resx">
+      <DependentUpon>frmInicial.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmLog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmLogBuscar.resx">
+      <DependentUpon>frmLogBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmOpciones.resx">
+      <DependentUpon>frmOpciones.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPasswd.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPasswd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPost.resx">
+      <DependentUpon>frmPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPre.resx">
+      <DependentUpon>frmPre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmProgramador.resx">
+      <DependentUpon>frmProgramador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRestaurar.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRestaurar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRestIndiComp.resx">
+      <DependentUpon>frmRestIndiComp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="BackupRestore_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Clases\Settings.cs" />
+    <Compile Include="Clases\VerListView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kcmpartitions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kcmdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yast_routing_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kdmconfig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noatun2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noatun21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fileopen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blockdevice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_txt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trashcan_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trashcan_full1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My Pictures.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2uparrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2downarrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2downarrow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2uparrow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iCandy_Junior 047_72x72.png" />
+    <None Include="Resources\iCandy_Junior 019_96x96.png" />
+    <None Include="Resources\iCandy_Junior 019_72x72.png" />
+    <None Include="Resources\iCandy_Junior 031_72x72.png" />
+    <None Include="Resources\iCandy_Junior 056_72x72.png" />
+    <None Include="Resources\CD Drives72x72.png" />
+    <None Include="Resources\CD Drives1.png" />
+    <None Include="Resources\restart72X72.png" />
+    <None Include="Resources\Error32x32.png" />
+    <None Include="Resources\Play32x32.png" />
+    <None Include="Resources\Pause32x32.png" />
+    <None Include="Resources\Pause.png" />
+    <None Include="Resources\Preview.jpg" />
+    <None Include="Resources\DossierAide64x64.png" />
+    <None Include="Resources\Terre32x32.png" />
+    <None Include="Resources\Information32x32.png" />
+    <None Include="Resources\Information.png" />
+    <None Include="Resources\DossierRecherche32x32.png" />
+    <None Include="Resources\DossierRecherche.png" />
+    <None Include="Resources\Mes Documents32x32.png" />
+    <None Include="Resources\Arreter32x32.png" />
+    <None Include="Resources\DownloadCD.png" />
+    <None Include="Resources\Configuration48x48.png" />
+    <None Include="Resources\Copier48x48.png" />
+    <None Include="Resources\No48x48.png" />
+    <None Include="Resources\todo.png" />
+    <None Include="Resources\uno a uno.png" />
+    <None Include="Resources\Downloads.png" />
+    <None Include="Resources\AVX_ICONS USERS FOLDER.png" />
+    <None Include="Resources\clef usb 3D.png" />
+    <None Include="Resources\PJFOLDERS UTILITIES 2.png" />
+    <None Include="Resources\Error8688.png" />
+    <None Include="Resources\Widgets.png" />
+    <None Include="Resources\EXCLAMATION.png" />
+    <None Include="Resources\Security1.png" />
+    <None Include="Resources\usb.png" />
+    <None Include="Resources\Security2.png" />
+    <None Include="Resources\BACK UP DRIVE.png" />
+    <None Include="Resources\Service Manager.png" />
+    <None Include="Resources\E-Mail.png" />
+    <None Include="Resources\restart.png" />
+    <None Include="Resources\Notas2.png" />
+    <None Include="Resources\Notas1.png" />
+    <None Include="Resources\kisspng-paper-post-it-note-download-notes-note-5a8508e5c190f3.9621071915186680057929.png" />
+    <None Include="Resources\Fichier.png" />
+    <None Include="Resources\NoX24.png" />
+    <None Include="Resources\YesX24.png" />
+    <None Include="Resources\Yes.png" />
+    <None Include="Resources\Dossier.png" />
+    <None Include="Resources\Task Manager alt 1.png" />
+    <None Include="Resources\thumb_Password_Reveal_button.png" />
+    <None Include="Resources\viewmag.png" />
+    <None Include="Resources\1421818188_101255.ico" />
+    <None Include="Resources\1421818173_71030.ico" />
+    <None Include="Resources\SYSTEM CLOCK.png" />
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="Resources\Options.png" />
+    <None Include="Resources\kalarm.png" />
+    <None Include="Resources\mycomputer.png" />
+    <None Include="Resources\kuser.png" />
+    <None Include="Resources\clock.png" />
+    <None Include="Resources\player_play_down.png" />
+    <None Include="Resources\reload.png" />
+    <None Include="Resources\kfloppy.png" />
+    <None Include="Resources\editcopy.png" />
+    <None Include="Resources\editdelete.png" />
+    <None Include="Resources\Password Reset.png" />
+    <None Include="Resources\desktop.png" />
+    <None Include="Resources\system.png" />
+    <None Include="Resources\start.png" />
+    <None Include="Resources\reload_page.png" />
+    <None Include="Resources\folder_public.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\My Computer.png" />
+    <None Include="Resources\Help2.png" />
+    <None Include="Resources\player_pause.png" />
+    <None Include="Resources\noatunplay.png" />
+    <None Include="Resources\noatunstop.png" />
+    <Content Include="Ayuda\Ayuda.htm" />
+    <Content Include="Ayuda\imagenes\Ayuda.ico" />
+    <Content Include="Ayuda\imagenes\configuracion.PNG" />
+    <Content Include="Ayuda\imagenes\copias1.PNG" />
+    <Content Include="Ayuda\imagenes\copias2.PNG" />
+    <Content Include="Ayuda\imagenes\eventos.PNG" />
+    <Content Include="Ayuda\imagenes\inicio.PNG" />
+    <Content Include="Ayuda\imagenes\restaura1.PNG" />
+    <Content Include="Ayuda\imagenes\restaura2.PNG" />
+    <Content Include="Backup&amp;Restore.ico" />
+    <None Include="Resources\Lock.png" />
+    <None Include="Resources\Fleche gauche rouge.png" />
+    <None Include="Resources\download_manager.png" />
+    <None Include="Resources\Volume Manager.png" />
+    <None Include="Resources\messagebox_critical.png" />
+    <None Include="Resources\encrypted.png" />
+    <None Include="Resources\Help3.png" />
+    <None Include="Resources\ICONGROUP_10704.bmp" />
+    <None Include="Resources\ICONGROUP_107041.bmp" />
+    <None Include="Resources\Help.ico" />
+    <None Include="Resources\CD Drives.png" />
+    <None Include="Resources\Default Programs.png" />
+    <None Include="Resources\reload_page1.png" />
+    <None Include="Resources\cdrom_unmount.png" />
+    <None Include="Resources\cdwriter_unmount.png" />
+    <None Include="Resources\HD-DVD 2.PNG" />
+    <None Include="Resources\DVD.png" />
+    <None Include="Resources\WinDVD.png" />
+    <None Include="Resources\ICONGROUP_302.ico" />
+    <None Include="Resources\CD.png" />
+    <None Include="Resources\ark.png" />
+    <None Include="Resources\ark_sombra.png" />
+    <None Include="Resources\insert_table_row.png" />
+    <None Include="Resources\agt_login.png" />
+    <None Include="Resources\agt_action_fail1.png" />
+    <None Include="Resources\agt_action_success.png" />
+    <None Include="Resources\agt_action_fail.png" />
+    <None Include="Resources\folder1.png" />
+    <None Include="Resources\fileclose.png" />
+    <None Include="Resources\fileclose1.png" />
+    <None Include="Resources\newrecurevent.png" />
+    <None Include="Resources\AQUA ICONS SYSTEM SEARCH.png" />
+    <None Include="Resources\DOC FOLDER.png" />
+    <None Include="Resources\SNOW E AQUA FOLDER.png" />
+    <None Include="Resources\!.png" />
+    <None Include="Resources\116.png" />
+    <None Include="Resources\95.png" />
+    <None Include="Resources\95_128.png" />
+    <None Include="Resources\Floppy.png" />
+    <None Include="Resources\Floppy Drive 3.png" />
+    <None Include="Resources\Disquette_v2.png" />
+    <None Include="Resources\Hard Drive44.png" />
+    <None Include="Resources\DRIVE HD.png" />
+    <None Include="Resources\Erreur.png" />
+    <None Include="Resources\List manager.png" />
+    <None Include="Resources\graphic-design.png" />
+    <None Include="Resources\kuser1.png" />
+    <None Include="Resources\_Drive_firewire.png" />
+    <None Include="Resources\DRIVE UTILITIES HD.png" />
+    <None Include="Resources\SNOW E AQUA DROP BOX 32x32.png" />
+    <None Include="Resources\SNOW E AQUA PRIVATE 32x32.png" />
+    <None Include="Resources\burn2.png" />
+    <None Include="Resources\WMP11.png" />
+    <None Include="Resources\cinnatech-GNO.jpg" />
+    <None Include="Resources\Blue_Thing_by_monkeymagico.png" />
+    <None Include="Resources\Concrete_by_monkeymagico.png" />
+    <None Include="Resources\fuzzy_light.jpg" />
+    <None Include="Resources\gregre.gif" />
+    <None Include="Resources\lightblue-wet.jpg" />
+    <None Include="Resources\imitation_leather.jpg" />
+    <None Include="Resources\Srg061.jpg" />
+    <None Include="Resources\grypaws.gif" />
+    <None Include="Resources\ice-light.jpg" />
+    <None Include="Resources\2rightarrow.png" />
+    <None Include="Resources\2rightarrow1.png" />
+    <None Include="Resources\build1_32x32.png" />
+    <None Include="Resources\build2_32x32.png" />
+    <None Include="Resources\iCandy_Junior 066.png" />
+    <None Include="Resources\iCandy_Junior 066_32x32.png" />
+    <None Include="Resources\player_pause.jpg" />
+    <None Include="Resources\player_pause1.png" />
+    <Content Include="Base de datos\datos.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Base de datos\Vacia\datos.mdb" />
+    <Content Include="Librerías\ComponentFactory.Krypton.Toolkit.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Librerías\ICSharpCode.SharpZipLib.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Librerías\Microsoft.Win32.TaskScheduler.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Librerías\Microsoft.Win32.TaskScheduler.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Notas\Programar una tarea desde la línea de comandos.txt" />
+    <Content Include="Notas\SC - Servicios Windows desde la consola.txt" />
+    <Content Include="Notas\Como Leer Archivos Grandes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServBackupRestore\ServBackupRestore.csproj">
+      <Project>{7a063ed2-c676-43d2-97e7-db8daf238fd8}</Project>
+      <Name>ServBackupRestore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
